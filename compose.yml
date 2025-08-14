@@ -4,6 +4,7 @@ services:
     image: httpd:latest
     container_name: my-apache-app
     ports:
-    - '80:80'
+      - '80:80'
     volumes:
-    - ./website:/usr/local/apache2/htdocs
+      - ./site:/usr/local/apache2/htdocs
+    restart: unless-stoppede
